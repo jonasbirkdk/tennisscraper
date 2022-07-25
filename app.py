@@ -27,7 +27,6 @@ new_collection = new_db["tennis"]
 
 @app.route("/", methods=["GET"])
 def start():
-    return "Hello from flask!"
     cursor = new_collection.find({})
     json_docs = [json.dumps(doc, default=json_util.default) for doc in cursor]
     return jsonify(json_docs)
