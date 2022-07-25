@@ -19,7 +19,7 @@ def brooks():
     url = 'https://clubspark.lta.org.uk/BrookGreenTennis'
 
     # call open browser function
-    driver = webdriver.Chrome(os.path.join(dirname, './chromedriver'))
+    driver = webdriver.Chrome(os.path.join(dirname, 'chromedriver'))
     driver.get(url)
     # login to website
     driver.find_element(By.XPATH, '//*[@id="account-options"]/ul/li[1]/span[1]/a').click()
